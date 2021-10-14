@@ -1,21 +1,28 @@
 .navbar {
-    height: 70px;
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
+    justify-content: center;
     background-color: #252525;
 
-    &__logo {
-        color: #fbd214;
-        font-size: 1rem;
-        cursor: pointer;
+    .navbar__container {
+        width: 90%;
+        max-width: 1200px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+
+        .navbar__logo {
+            color: #fbd214;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    
+        .navbar__tabs {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
     }
 
-    &__tabs {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
 }
