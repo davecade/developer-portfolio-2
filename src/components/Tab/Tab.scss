@@ -18,6 +18,10 @@
     }
   }
 
+  &:focus {
+      
+  }
+
   .underline {
       position: relative;
       top: .4em;
@@ -26,5 +30,6 @@
       width: 0;
       height: 0;
       transition: width .3s ease-out;
+      
   }
 }

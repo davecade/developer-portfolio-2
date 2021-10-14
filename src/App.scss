@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h1,h2,h3,h4,li,div {
+  user-select: none;
+}
+
 .App {
   background-color: #2b2c2c;
   min-height: 100vh;
