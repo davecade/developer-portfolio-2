@@ -1,0 +1,30 @@
+.tab {
+  color: #f2f2f2;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: color 0.5s ease-out;
+  border-bottom: 2px solid none;
+
+  &:hover {
+    cursor: pointer;
+    color: #fbd214;
+
+    .underline {
+        width: 1.5rem;
+        visibility: visible;
+    }
+  }
+
+  .underline {
+      position: relative;
+      top: .4em;
+      border-top: .1rem solid #fbd214;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      transition: width .3s ease-out;
+  }
+}
