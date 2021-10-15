@@ -1,11 +1,16 @@
 import React from 'react'
 import './Tab.scss'
 
-const Tab = ({ className, title }) => {
+const Tab = ({ className, title, current }) => {
     return (
-        <li className={`tab ${className}`}>
+        <li className={`tab ${className}`} style={current ? {
+            color: '#fbd214'
+        }:null} >
             {title}
-            <div className="underline"></div>
+            <div className="underline" style={current ? {
+                width: '1.5rem',
+                visibility: 'visible'
+            }:null}></div>
         </li>
     )
 }

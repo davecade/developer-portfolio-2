@@ -8,6 +8,10 @@ h1,h2,h3,h4,li,div,p {
   user-select: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .App {
   background-color: #2b2c2c;
   min-height: 100vh;
