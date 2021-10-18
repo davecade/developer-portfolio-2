@@ -1,0 +1,15 @@
+.title {
+    color: #cccccc;
+    font-size: 3rem;
+    margin-bottom: .8rem;
+}
+
+.underline {
+    position: relative;
+    top: .4em;
+    border-top: .3rem solid #fbd214;
+    width: 6rem;
+    height: 0;
+    transition: width .3s ease-out;
+    
+}

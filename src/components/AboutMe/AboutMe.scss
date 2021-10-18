@@ -1,0 +1,53 @@
+.aboutme-section {
+    background-color: #303131;
+    height: fit-content;
+
+    .aboutme-container {
+        height: fit-content;
+        background-color: #303131;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
+
+
+        .title-container {
+            position: relative;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .aboutme-image {
+                position: absolute;
+                background-color: #303131;
+                width: 10rem;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                z-index: 0;
+                left: 0;
+                top: 0;
+            }
+
+            .aboutme {
+                z-index: 1;
+            }
+        }
+    
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .text {
+                color: #9f9f91;
+                font-size: 1.1rem;
+                text-align: start;
+            }
+        }
+    }
+}
