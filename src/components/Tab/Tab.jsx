@@ -4,7 +4,7 @@ import './Tab.scss'
 const Tab = ({ className, title, current }) => {
     return (
         <li className={`tab ${className}`} style={current ? {
-            color: '#fbd214'
+            color: '#6C63FF'
         }:null} >
             {title}
             <div className="underline" style={current ? {

@@ -12,16 +12,14 @@
         max-width: 1200px;
         margin: 0 auto;
 
-
-        .title-container {
-            position: relative;
+        .image-container {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
 
             .aboutme-image {
-                position: absolute;
+                flex: 1;
                 background-color: #303131;
                 width: 10rem;
                 margin-bottom: 1rem;
@@ -30,18 +28,19 @@
                 left: 0;
                 top: 0;
             }
-
-            .aboutme {
-                z-index: 1;
-            }
         }
-    
+
         .content {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 0 3rem;
+
+            .aboutme {
+                margin-bottom: 2rem;
+            }
     
             .text {
                 color: #9f9f91;
