@@ -12,7 +12,7 @@ const Hero = () => {
                     <br />
                     Founding member of Ngeh Klan Productions.
                 </p>
-                <Button className={"hireme"} title={"Hire Me"} />
+                <Button className={"know-more"} title={"Know More"} />
             </div>
             <div className="profile__container">
                 <img className="profile" src={profilePic} alt="profile" />
