@@ -2,6 +2,7 @@ import React from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/programming.svg'
+import Button from '../Button/Button'
 
 const AboutMe = () => {
     return (
@@ -17,6 +18,10 @@ const AboutMe = () => {
                         <br />
                         <p>Technology Stack: HTML & CSS, JavaScript, React, Firebase</p>
                     </div>
+                    <div className="buttons-container">
+                        <Button className={"view-works"} title={"View Works"} />
+                    </div>
+
                 </div>
             </div>
         </div>

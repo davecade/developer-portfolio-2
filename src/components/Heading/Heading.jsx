@@ -3,7 +3,7 @@ import './Heading.scss'
 
 const Heading = ({ className, title }) => {
     return (
-        <div className={className}>
+        <div className={`heading ${className}`}>
             <h1 className="title">{title}</h1>
             <div className="underline"></div>
         </div>
