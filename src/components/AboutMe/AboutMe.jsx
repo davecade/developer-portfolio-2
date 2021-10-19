@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/developer.svg'
