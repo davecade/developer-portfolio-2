@@ -19,9 +19,8 @@
             align-items: center;
 
             .aboutme-image {
-                flex: 1;
                 background-color: #303131;
-                width: 10rem;
+                width: 25rem;
                 margin-bottom: 1rem;
                 margin-right: 1rem;
                 z-index: 0;
@@ -43,10 +42,11 @@
             }
     
             .text {
-                color: #9f9f91;
+                //color: #9f9f91;
+                color: #cccccc;
                 font-size: 1.1rem;
                 text-align: start;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
             }
 
             .buttons-container {
@@ -55,9 +55,10 @@
                 align-items: center;
                 width: 100%;
 
-                .view-works {
+                .about-button {
                     padding: 1rem 3rem;
                     font-size: 1rem;
+                    margin-right: 1.5rem;
                 }
             }
         }

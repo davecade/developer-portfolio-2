@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.scss'
-import profilePic from '../../assets/coding.svg'
+import profilePic from '../../assets/hello.svg'
 import Button from '../Button/Button'
 
 const Hero = () => {

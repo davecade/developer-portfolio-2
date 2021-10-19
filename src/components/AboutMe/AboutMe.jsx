@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
-import image from '../../assets/programming.svg'
+import image from '../../assets/developer.svg'
 import Button from '../Button/Button'
 
 const AboutMe = () => {
+
     return (
         <div className="aboutme-section">
             <div className="aboutme-container">
@@ -19,7 +20,8 @@ const AboutMe = () => {
                         <p>Technology Stack: HTML & CSS, JavaScript, React, Firebase</p>
                     </div>
                     <div className="buttons-container">
-                        <Button className={"view-works"} title={"View Works"} />
+                        <Button className={"about-button"} title={"View Works"} />
+                        <Button className={"about-button"} title={"Download CV"} inverse />
                     </div>
 
                 </div>
