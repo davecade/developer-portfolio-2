@@ -1,0 +1,48 @@
+.project {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+
+    .overview {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        .project__title {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+        }
+
+        .project__description {
+            color: #cccccc;
+            margin-bottom: 1.5rem;
+            width: 80%;
+            font-size: 1.1rem;
+        }
+
+        .project-buttons-container {
+            display: flex;
+
+            .project-button {
+                margin-right: 1.5rem;
+                font-size: 1rem;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #526cfe;
+        box-shadow: rgba(82, 108, 254, 0.3) 0px 19px 38px, rgba(82, 108, 254, 0.22) 0px 15px 12px;
+       
+        .image {
+            width: 40rem;
+        }
+    }
+}

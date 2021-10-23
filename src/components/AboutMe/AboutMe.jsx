@@ -1,7 +1,7 @@
 import React from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
-import image from '../../assets/developer.svg'
+import image from '../../assets/proud.svg'
 import Button from '../Button/Button'
 
 const AboutMe = () => {

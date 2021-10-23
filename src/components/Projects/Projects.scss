@@ -1,16 +1,26 @@
-.projects {
-    .heading {
-        margin-top: 10rem;
-    }
+.project__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .overview {
+    .projects {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        .project-buttons-container {
-            display: flex;
-
-            .project-button {
-                margin-right: 1.5rem;
-            }
+    
+        .heading {
+            margin-top: 10rem;
+            margin-bottom: 4rem;
         }
+
+        .projects__image {
+            width: 20rem;
+            margin-bottom: 4rem;
+        }
+    
     }
 }

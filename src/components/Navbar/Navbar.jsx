@@ -10,11 +10,11 @@ const Navbar = () => {
                     <h1>D.</h1>
                 </div>
                 <ul className="navbar__tabs">
-                    <Tab className="home" title="Home" current />
-                    <Tab className="about" title="About" />
-                    <Tab className="projects" title="Projects" />
-                    <Tab className="contact" title="Contact" />
-                    <Tab className="blog" title="Blog" />
+                    <Tab className="navbar__home" title="Home" current />
+                    <Tab className="navbar__about" title="About" />
+                    <Tab className="navbar__projects" title="Projects" />
+                    <Tab className="navbar__contact" title="Contact" />
+                    <Tab className="navbar__blog" title="Blog" />
                 </ul>
             </div>
         </div>
