@@ -26,11 +26,9 @@ const Button = ({ className, title, link='', inverse, project }) => {
     }
 
     return (
-        <div>
-            <button style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>
-                <a href={link} target={project ? "_blank" : "" }>{title}</a>
-            </button>
-        </div>
+        <button style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>
+            <a href={link} target={project ? "_blank" : "" } rel="noreferrer">{title}</a>
+        </button>
     )
 }
 
