@@ -19,8 +19,8 @@ const projectsArray = [
             Redux / Redux Sagas for state management. Hosted on Heroku.
         `,
         image: netflixImage,
-        url: '',
-        github: ''
+        url: 'https://netflix-clone-live.herokuapp.com/',
+        github: 'https://github.com/davecade/netflix-clone'
     },
     {
         title: "Caity's Clothing Store",
@@ -31,8 +31,8 @@ const projectsArray = [
             Redux Sagas, and React Router. Responsive design. Hosted on Heroku.
         `,
         image: caitysClothingImage,
-        url: '',
-        github: ''
+        url: 'https://caitys-clothing-live.herokuapp.com/',
+        github: 'https://github.com/davecade/caitys-clothing'
     },
     {
         title: "Ticket Logger",
@@ -42,8 +42,8 @@ const projectsArray = [
             Redux, Redux Sagas, and React Router. Hosted on Heroku.
         `,
         image: ticketLoggerImage,
-        url: '',
-        github: ''
+        url: 'https://ticket-logger-live.herokuapp.com/',
+        github: 'https://github.com/davecade/ticket-logger'
     },
     {
         title: "Dave's Pokedex",
@@ -55,8 +55,8 @@ const projectsArray = [
             calls. Responsive Design
         `,
         image: pokemonImage,
-        url: '',
-        github: ''
+        url: 'https://daves-pokedex-live.herokuapp.com/',
+        github: 'https://github.com/davecade/pokedex'
     },
     {
         title: "Visual Sorting",
@@ -67,8 +67,8 @@ const projectsArray = [
             Responsive Design. Hosted on Heroku.
         `,
         image: sortImaage,
-        url: '',
-        github: ''
+        url: 'https://visual-sorting-live.herokuapp.com/',
+        github: 'https://github.com/davecade/visual-sorting'
     },
 ]
 
@@ -81,7 +81,7 @@ const Projects = () => {
 
                 {
                     projectsArray.map( project => (
-                        <Project title={project.title} description={project.description} image={project.image} />
+                        <Project project={project} />
                     ))
                 }
             </div>

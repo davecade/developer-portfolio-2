@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react'
 import './Button.scss'
 
-const Button = ({ className, title, inverse }) => {
+const Button = ({ className, title, link='', inverse, project }) => {
     const [ buttonStyle, setButtonStyle ] = useState({})
     const [ styleType, setStyleType ] = useState(inverse)
 
@@ -27,7 +27,9 @@ const Button = ({ className, title, inverse }) => {
 
     return (
         <div>
-            <button style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>{title}</button>
+            <button style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>
+                <a href={link} target={project ? "_blank" : "" }>{title}</a>
+            </button>
         </div>
     )
 }

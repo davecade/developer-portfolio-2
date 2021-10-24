@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +14,30 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
 .App {
   background-color: #2b2c2c;
   min-height: 100vh;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 
