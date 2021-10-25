@@ -1,12 +1,17 @@
-import React from 'react'
-import Heading from '../Heading/Heading'
-import './Projects.scss'
-import Project from '../Project/Project'
+//-- Preview Images
 import netflixImage from '../../assets/netflix1.PNG'
 import caitysClothingImage from '../../assets/caitys-clothing-store.PNG'
 import pokemonImage from '../../assets/daves-pokedex.PNG'
 import ticketLoggerImage from '../../assets/ticket-logger.PNG'
 import sortImaage from '../../assets/visual-sorting.PNG'
+
+//-- Icons
+import reactIcon from '../../assets/icons/react.svg'
+import firebaseIcon from '../../assets/icons/firebase.svg'
+import herokuIcon from '../../assets/icons/heroku.svg'
+import reduxIcon from '../../assets/icons/redux.svg'
+import stripeIcon from '../../assets/icons/stripe.svg'
+import expressIcon from '../../assets/icons/express.svg'
 
 
 const projectsArray = [
@@ -20,7 +25,8 @@ const projectsArray = [
         `,
         image: netflixImage,
         url: 'https://netflix-clone-live.herokuapp.com/',
-        github: 'https://github.com/davecade/netflix-clone'
+        github: 'https://github.com/davecade/netflix-clone',
+        technologies: [reactIcon, reduxIcon, herokuIcon]
     },
     {
         title: "Caity's Clothing Store",
@@ -32,7 +38,8 @@ const projectsArray = [
         `,
         image: caitysClothingImage,
         url: 'https://caitys-clothing-live.herokuapp.com/',
-        github: 'https://github.com/davecade/caitys-clothing'
+        github: 'https://github.com/davecade/caitys-clothing',
+        technologies: [reactIcon, reduxIcon, firebaseIcon, expressIcon, stripeIcon, herokuIcon]
     },
     {
         title: "Ticket Logger",
@@ -43,7 +50,8 @@ const projectsArray = [
         `,
         image: ticketLoggerImage,
         url: 'https://ticket-logger-live.herokuapp.com/',
-        github: 'https://github.com/davecade/ticket-logger'
+        github: 'https://github.com/davecade/ticket-logger',
+        technologies: [reactIcon, reduxIcon, firebaseIcon, herokuIcon]
     },
     {
         title: "Dave's Pokedex",
@@ -56,7 +64,8 @@ const projectsArray = [
         `,
         image: pokemonImage,
         url: 'https://daves-pokedex-live.herokuapp.com/',
-        github: 'https://github.com/davecade/pokedex'
+        github: 'https://github.com/davecade/pokedex',
+        technologies: [reactIcon, reduxIcon, herokuIcon]
     },
     {
         title: "Visual Sorting",
@@ -68,25 +77,9 @@ const projectsArray = [
         `,
         image: sortImaage,
         url: 'https://visual-sorting-live.herokuapp.com/',
-        github: 'https://github.com/davecade/visual-sorting'
+        github: 'https://github.com/davecade/visual-sorting',
+        technologies: [reactIcon, reduxIcon, herokuIcon]
     },
 ]
 
-
-const Projects = () => {
-    return (
-        <div className="project__section">
-            <div className="projects">
-                <Heading className={"heading"} title={"Projects"} />
-
-                {
-                    projectsArray.map( project => (
-                        <Project project={project} />
-                    ))
-                }
-            </div>
-        </div>
-    )
-}
-
-export default Projects
+export default projectsArray;

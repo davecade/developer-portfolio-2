@@ -3,10 +3,10 @@ import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/proud.svg'
 import Button from '../Button/Button'
-import mongodb from '../../assets/MERN/mongodb.svg'
-import nodejs from '../../assets/MERN/nodejs.svg'
-import reactjs from '../../assets/MERN/reactjs.svg'
-import express from '../../assets/MERN/express.svg'
+import firebase from '../../assets/icons/firebase.svg'
+import nodejs from '../../assets/icons/nodejs.svg'
+import reactjs from '../../assets/icons/react.svg'
+import express from '../../assets/icons/express.svg'
 
 const AboutMe = () => {
 
@@ -21,12 +21,12 @@ const AboutMe = () => {
                     <div className="text">
                         <p>I'm a Software Developer from Sydney Australia. I specialize in Web Development using ReactJS.</p>
                         <br />
-                        <p>Technology Stack: HTML & CSS, JavaScript, React, Firebase</p>
-                        <div className="tech" style={{ backgroundColor: "#f2f2f2" }}>
-                            <img src={mongodb} alt="" style={{height: "5rem"}} />
-                            <img src={nodejs} alt="" style={{height: "5rem"}} />
-                            <img src={reactjs} alt="" style={{height: "5rem"}} />
-                            <img src={express} alt="" style={{height: "5rem"}} />
+                        <p>Preferred technology stack: Firebase, Express, React, Node.</p>
+                        <div className="tech">
+                            <img src={firebase} alt="" className="stack__image" />
+                            <img src={express} alt="" className="stack__image" />
+                            <img src={reactjs} alt="" className="stack__image" />   
+                            <img src={nodejs} alt="" className="stack__image" />
                         </div>
                     </div>
                     <div className="buttons-container">
