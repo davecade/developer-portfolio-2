@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import './scss-utils//utilities.module.scss';
 
 * {
   margin: 0;
@@ -39,7 +40,7 @@ a:active {
 }
 
 .App {
-  background-color: #2b2c2c;
+  background-color: $bg-dark;
   //background-color: #353434;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;

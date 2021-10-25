@@ -18,10 +18,9 @@ const AboutMe = () => {
                 </div>
                 <div className="content">
                     <Heading className={"aboutme"} title={"About Me"} />
-                    <div className="text">
-                        <p>I'm a Software Developer from Sydney Australia. I specialize in Web Development using ReactJS.</p>
-                        <br />
-                        <p>Preferred technology stack: Firebase, Express, React, Node.</p>
+                    <div className="text__container">
+                        <p className="text">I'm a Software Developer from Sydney Australia. I specialize in Web Development using ReactJS.</p>
+                        <p className="text">Preferred technology stack: Firebase, Express, React, Node.</p>
                         <div className="tech">
                             <img src={firebase} alt="" className="stack__image" />
                             <img src={express} alt="" className="stack__image" />

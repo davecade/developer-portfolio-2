@@ -1,3 +1,5 @@
+@import '../../scss-utils/utilities.module.scss';
+
 .project {
     display: flex;
     justify-content: flex-start;
@@ -12,13 +14,13 @@
 
         .project__title {
             //color: #cccccc;
-            color: #f2f2f2;
+            color: $text-body;
             margin-bottom: 1.5rem;
         }
 
         .project__description {
             //color: #cccccc;
-            color: #f2f2f2;
+            color: $text-body;
             margin-bottom: 1.5rem;
             width: 80%;
             font-size: 1rem;
@@ -55,11 +57,13 @@
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        border: 1px solid #526cfe;
-        box-shadow: rgba(82, 108, 254, 0.3) 0px 19px 38px, rgba(82, 108, 254, 0.22) 0px 15px 12px;
-       
+        border: 1px solid $primary;
+        //box-shadow: rgba(82, 108, 254, 0.3) 0px 19px 38px, rgba(82, 108, 254, 0.22) 0px 15px 12px;
+        box-shadow: rgba(109, 190, 75, 0.3) 0px 19px 38px, rgba(109, 190, 75, 0.22) 0px 15px 12px;
         .image {
             width: 40rem;
         }
     }
 }
+
+//#6dbe4b

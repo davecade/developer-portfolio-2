@@ -1,5 +1,7 @@
+@import '../../scss-utils/utilities.module.scss';
+
 .aboutme-section {
-    background-color: #303131;
+    background-color: $bg-light;
     //background-color: #424242;
     height: fit-content;
 
@@ -19,7 +21,7 @@
             align-items: center;
 
             .aboutme-image {
-                background-color: #303131;
+                background-color: $bg-light;
                 //background-color: #424242;
                 width: 25rem;
                 margin-bottom: 1rem;
@@ -43,12 +45,16 @@
                 align-items: flex-start;
             }
     
-            .text {
+            .text__container {
                 //color: #9f9f91;
-                color: #f2f2f2;
+                color: $text-body;
                 font-size: 1.1rem;
                 text-align: start;
                 margin-bottom: 1.5rem;
+            }
+
+            .text {
+                margin-bottom: 1rem;
             }
 
             .tech {

@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import styles from '../../scss-utils/utilities.module.scss';
 import './Button.scss'
 
 const Button = ({ className, title, link='', inverse, project }) => {
@@ -8,15 +9,15 @@ const Button = ({ className, title, link='', inverse, project }) => {
     useLayoutEffect(() => {
         if(!styleType) {
             setButtonStyle({
-                backgroundColor: '#536DFE',
-                border: '2px solid #536DFE',
-                color: '#feffff'
+                backgroundColor: styles.primary,
+                border: `2px solid ${styles.primary}`,
+                color: styles.bgLight
             })
         } else {
             setButtonStyle({
-                backgroundColor: '#252829',
-                border: '2px solid #536DFE',
-                color: '#536DFE'
+                backgroundColor: styles.bgDark,
+                border: `2px solid ${styles.primary}`,
+                color: styles.primary
             })
         }
     }, [styleType])

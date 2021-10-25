@@ -1,3 +1,5 @@
+@import '../../scss-utils/utilities.module.scss';
+
 .hero {
     min-height: 100vh;
     max-width: 1200px;
@@ -14,13 +16,13 @@
         
 
         .intro {
-            color: #ffffff;
+            color: $text-heading;
             font-size: 5rem;
             margin-bottom: 1rem;
         }
 
         .title {
-            color: #f2f2f2;
+            color: $text-body;
             font-size: 1.5rem;
             margin-bottom: 4rem;
         }
