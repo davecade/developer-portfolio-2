@@ -1,5 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
-import styles from '../../scss-utils/utilities.module.scss';
+import styles from '../../scss-styles/styles.module.scss';
 import './Button.scss'
 
 const Button = ({ className, title, link='', inverse, project }) => {
@@ -11,7 +11,7 @@ const Button = ({ className, title, link='', inverse, project }) => {
             setButtonStyle({
                 backgroundColor: styles.primary,
                 border: `2px solid ${styles.primary}`,
-                color: styles.bgLight
+                color: styles.textBody
             })
         } else {
             setButtonStyle({

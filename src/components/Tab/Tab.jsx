@@ -1,6 +1,6 @@
 import React from 'react'
 import './Tab.scss'
-import styles from '../../scss-utils/utilities.module.scss';
+import styles from '../../scss-styles/styles.module.scss';
 
 const Tab = ({ className, title, current }) => {
     return (
