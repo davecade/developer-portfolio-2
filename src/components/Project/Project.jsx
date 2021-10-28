@@ -15,8 +15,8 @@ const Project = ({ project }) => {
                 <p className="project__description">{description}</p>
                 <div className="technologies">
                     {
-                        technologies.map( tech => (
-                            <img className="tech-icon" src={tech} alt="" />
+                        technologies.map( (tech, index) => (
+                            <img key={index} className="tech-icon" src={tech} alt="" />
                         ))
                     }
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.scss'
-import profilePic from '../../assets/hello.svg'
+import profilePic from '../../assets/dave-profile-5.jpg'
 import Button from '../Button/Button'
 
 const Hero = () => {
@@ -8,9 +8,9 @@ const Hero = () => {
         <div className="hero">
             <div className="hero__content">
                 <h1 className="intro">I'm Dave</h1>
-                <p className="title">Software Developer. 
-                    <br />
-                    Founding member of Ngeh Klan Productions.
+                <p className="title">Software Developer from Australia. 
+                    {/* <br />
+                    Founding member of Ngeh Klan Productions. */}
                 </p>
                 <Button className={"know-more"} title={"Know More"} />
             </div>

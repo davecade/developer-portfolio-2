@@ -12,6 +12,7 @@ import herokuIcon from '../../assets/icons/heroku.svg'
 import reduxIcon from '../../assets/icons/redux.svg'
 import stripeIcon from '../../assets/icons/stripe.svg'
 import expressIcon from '../../assets/icons/express.svg'
+import nodejsIcon from '../../assets/icons/nodejs.svg'
 
 
 const projectsArray = [
@@ -39,7 +40,7 @@ const projectsArray = [
         image: caitysClothingImage,
         url: 'https://caitys-clothing-live.herokuapp.com/',
         github: 'https://github.com/davecade/caitys-clothing',
-        technologies: [reactIcon, reduxIcon, firebaseIcon, expressIcon, stripeIcon, herokuIcon]
+        technologies: [reactIcon, reduxIcon, firebaseIcon, expressIcon, nodejsIcon, stripeIcon, herokuIcon]
     },
     {
         title: "Ticket Logger",

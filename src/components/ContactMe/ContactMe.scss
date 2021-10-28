@@ -1,0 +1,16 @@
+@import '../../scss-styles/styles.module.scss';
+
+.contact__section {
+    width: 100%;
+    background-color: $bg-light;
+    padding-top: 10rem;
+
+    .contact__content {
+        max-width: 1200px;
+
+        height: 50rem;
+        .contact__heading {
+
+        }
+    }
+}

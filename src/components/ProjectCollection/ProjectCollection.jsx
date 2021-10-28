@@ -9,10 +9,10 @@ const ProjectCollection = () => {
     return (
         <div className="project__section">
             <div className="projects">
-                <Heading className={"heading"} title={"Projects"} />
+                <Heading className={"projects__heading"} title={"Projects"} />
                 {
-                    projectsArray.map( project => (
-                        <Project project={project} />
+                    projectsArray.map( (project, index) => (
+                        <Project key={index} project={project} />
                     ))
                 }
             </div>
