@@ -29,8 +29,8 @@ const AboutMe = () => {
                         </div>
                     </div>
                     <div className="buttons-container">
-                        <Button className={"about-button"} title={"View Projects"} />
-                        <Button className={"about-button"} title={"Download CV"} inverse />
+                        <Button className={"about-button"} title={"View Projects"} link={"#projects"} />
+                        <Button className={"about-button"} title={"Request CV"} link={"#contact"} inverse />
                     </div>
 
                 </div>

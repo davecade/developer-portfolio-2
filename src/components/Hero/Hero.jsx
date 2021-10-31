@@ -9,10 +9,8 @@ const Hero = () => {
             <div className="hero__content">
                 <h1 className="intro">I'm Dave</h1>
                 <p className="title">Software Developer from Australia. 
-                    {/* <br />
-                    Founding member of Ngeh Klan Productions. */}
                 </p>
-                <Button className={"know-more"} title={"Know More"} />
+                <Button className={"know-more"} title={"Know More"} link={"#about"} />
             </div>
             <div className="profile__container">
                 <img className="profile" src={profilePic} alt="profile" />

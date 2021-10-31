@@ -7,7 +7,7 @@ import projectsArray from './data'
 
 const ProjectCollection = () => {
     return (
-        <div className="project__section">
+        <div id="projects" className="project__section">
             <div className="projects">
                 <Heading className={"projects__heading"} title={"Projects"} />
                 {

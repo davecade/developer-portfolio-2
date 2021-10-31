@@ -1,10 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import './Navbar.scss'
 import Tab from '../Tab/Tab'
 
+
+const navBarTransparent = {
+    background: "rgba(18, 24, 27, 0);"
+}
+const navBarSolid = {
+    backgroundColor: "rgba(18, 24, 27, 1)"
+    //--#131312
+}
+
 const Navbar = () => {
+    const [ offset, setOffset ] = useState(0);
+    const [ background, setBackground ] = useState({})
+
+    const handleScroll = useCallback(() => {
+        if(offset > 20) {
+            setBackground(navBarSolid)
+        } else {
+            setBackground(navBarTransparent)
+        }
+    }, [offset])
+
+    useEffect(() => {
+        window.onscroll = () => {
+            setOffset(window.pageYOffset)
+            handleScroll()
+        }
+    }, [handleScroll]);
+
     return (
-        <div className="navbar">
+        <div className="navbar" style={background}>
             <div className="navbar__container">
                 <div className="navbar__logo">
                     <h1>D.</h1>

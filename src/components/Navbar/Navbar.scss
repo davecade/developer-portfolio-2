@@ -5,7 +5,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: $bg-darker;
+    transition: background .5s ease-in-out;
+    z-index: 10;
 
     .navbar__container {
         width: 90%;

@@ -9,7 +9,7 @@ const Project = ({ project }) => {
     const { title, description, image, url, github, technologies } = project
 
     return (
-        <div id="projects" className="project">
+        <div className="project">
             <div className="overview">
                 <h1 className="project__title">{title}</h1>
                 <p className="project__description">{description}</p>
