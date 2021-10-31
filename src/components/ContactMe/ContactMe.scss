@@ -1,108 +1,144 @@
-@import '../../scss-styles/styles.module.scss';
+@import "../../scss-styles/styles.module.scss";
 
 .contact__section {
-    width: 100%;
-    background-color: $bg-light;
-    padding-top: 10rem;
+  width: 100%;
+  background-color: $bg-light;
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact__heading {
+    margin-bottom: 3rem;
+  }
+
+  .contact__content {
+    max-width: 1200px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10rem;
 
-    .contact__heading {
-        margin-bottom: 3rem;
-    }
+    // .contact__info {
+    //     display: flex;
+    //     flex: 1;
+    //     flex-direction: column;
+    //     justify-content: center;
 
-    .contact__content {
-        max-width: 1200px;
+    //     .contact__info__title {
+    //         color: $text-body;
+    //         margin-bottom: 1rem;
+    //     }
+
+    //     .email__container {
+    //         color: #79a7df;
+    //         margin-bottom: 1rem;
+    //     }
+    // }
+
+    .contact__form__container {
+      min-width: 70%;
+      .contact__form {
+        display: grid;
+        margin-bottom: 2rem;
+        grid-template-areas:
+          "name name"
+          "phone email"
+          "message message";
+        grid-gap: 2rem;
+
+        .name__container {
+          grid-area: name;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .phone__container {
+          grid-area: phone;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .email__container {
+          grid-area: email;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .message__container {
+          grid-area: message;
+          display: flex;
+          flex-direction: column;
+        }
+
+        label {
+          color: $text-body;
+          margin-bottom: 1rem;
+        }
+
+        input {
+          background-color: #414a57;
+          outline: none;
+          border: none;
+          padding: 1rem;
+          color: $text-body;
+
+          &::placeholder {
+            color: $text-body;
+          }
+        }
+
+        textarea {
+          background-color: #414a57;
+          color: $text-body;
+          padding: 1rem;
+          font-family: inherit;
+          outline: none;
+          border: none;
+
+          &::placeholder {
+            color: $text-body;
+          }
+        }
+      }
+
+      .contact__button {
+        margin-bottom: 4rem;
+        width: 11rem;
+        height: 3.5rem;
+      }
+
+      .social__container {
         display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 10rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        // .contact__info {
-        //     display: flex;
-        //     flex: 1;
-        //     flex-direction: column;
-        //     justify-content: center;
-            
+        h4 {
+          color: $text-heading;
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
 
-        //     .contact__info__title {
-        //         color: $text-body;
-        //         margin-bottom: 1rem;
-        //     }
+        .social__icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        //     .email__container {
-        //         color: #79a7df;
-        //         margin-bottom: 1rem;
-        //     }
-        // }
-
-        .contact__form__container {
-            min-width: 70%;
-            .contact__form {
-                display: grid;
-                margin-bottom: 2rem;
-                grid-template-areas: "name name"
-                                    "phone email"
-                                    "message message";
-                grid-gap: 2rem;
-
-                .name__container {
-                    grid-area: name;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .phone__container {
-                    grid-area: phone;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .email__container {
-                    grid-area: email;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .message__container {
-                    grid-area: message;
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                label {
-                    color: $text-body;
-                    margin-bottom: 1rem;
-                }
-
-                input {
-                    background-color: #414a57;
-                    outline: none;
-                    border: none;
-                    padding: 1rem;
-                    color: $text-body;
-
-                    &::placeholder {
-                        color: $text-body
-                    }
-                }
-
-                textarea {
-                    background-color: #414a57;
-                    color: $text-body;
-                    padding: 1rem;
-                    font-family: inherit;
-                    outline: none;
-                    border: none;
-
-                    &::placeholder {
-                        color: $text-body
-                    }
-                }
+            a {
+                i {
+                    color: #94a0af;
+                    margin: 0 1rem;
+                    font-size: 2rem;
+                  }
             }
         }
+
+
+
+      }
     }
+  }
 }

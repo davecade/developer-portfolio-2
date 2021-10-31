@@ -11,7 +11,7 @@ import express from '../../assets/icons/express.svg'
 const AboutMe = () => {
 
     return (
-        <div className="aboutme-section">
+        <div id="about" className="aboutme-section">
             <div className="aboutme-container">
                 <div className="image-container">
                     <img className="aboutme-image" src={image} alt="" />

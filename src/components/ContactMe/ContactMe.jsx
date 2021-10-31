@@ -1,12 +1,11 @@
 import React from 'react'
 import './ContactMe.scss'
-import styles from '../../scss-styles/styles.module.scss';
 import Heading from '../Heading/Heading'
 import Button from '../Button/Button'
 
 const ContactMe = () => {
     return (
-        <div className="contact__section">
+        <div id="contact" className="contact__section">
             <Heading className={"contact__heading"} title={"Contact Me"}/>
 
             <div className="contact__content">
@@ -30,12 +29,12 @@ const ContactMe = () => {
 
                         <div className="phone__container">
                             <label>PHONE NUMBER</label>
-                            <input type="phone" placeholder="Type your name" />
+                            <input type="phone" placeholder="Type your phone number" />
                         </div>
 
                         <div className="email__container">
                             <label>EMAIL</label>
-                            <input type="email" placeholder="Type your name" />
+                            <input type="email" placeholder="Type your email" />
                         </div>
                         
                         <div className="message__container">
@@ -43,7 +42,26 @@ const ContactMe = () => {
                             <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
                         </div>
                     </form>
-                    <Button title={"Send Message"} />
+                    <Button title={"Send Message"} className={"contact__button"} />
+                    
+                    <div className="social__container">
+                        <h4>Follow Me</h4>
+                        <div className="social__icons">
+                            
+                            <a href="https://www.facebook.com/dave.cadelina" target="_blank" rel="noreferrer">
+                                <i className="fab fa-facebook-f"></i>
+                            </a>
+                            
+                            <a href="https://github.com/davecade/" target="_blank" rel="noreferrer">
+                                <i className="fab fa-github-square"></i>
+                            </a>
+
+                            <a href="https://twitter.com/Dave25903679" target="_blank" rel="noreferrer">
+                                <i className="fab fa-twitter"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
                 </div>
 
             </div>
