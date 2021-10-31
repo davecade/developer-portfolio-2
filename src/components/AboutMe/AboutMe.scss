@@ -3,7 +3,10 @@
 .aboutme-section {
     background-color: $bg-light;
     //background-color: #424242;
-    height: fit-content;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .aboutme-container {
         height: fit-content;
