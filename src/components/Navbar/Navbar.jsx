@@ -8,7 +8,6 @@ const navBarTransparent = {
 }
 const navBarSolid = {
     backgroundColor: "rgba(18, 24, 27, 1)"
-    //--#131312
 }
 
 const Navbar = () => {
@@ -30,6 +29,7 @@ const Navbar = () => {
         }
     }, [handleScroll]);
 
+
     return (
         <div className="navbar" style={background}>
             <div className="navbar__container">
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <Tab className="navbar__about" title="About" scroll="#about" />
                     <Tab className="navbar__projects" title="Projects" scroll="#projects" />
                     <Tab className="navbar__contact" title="Contact" scroll="#contact" />
-                    <Tab className="navbar__blog" title="Blog" />
+                    {/* <Tab className="navbar__blog" title="Blog" /> */}
                 </ul>
             </div>
         </div>
