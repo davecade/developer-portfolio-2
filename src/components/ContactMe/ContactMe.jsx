@@ -62,11 +62,11 @@ const ContactMe = ({ activateContact }) => {
                         <div className="social__icons">
                             
                             <a href="https://www.facebook.com/dave.cadelina" target="_blank" rel="noreferrer">
-                                <i className="fab fa-facebook-f"></i>
+                                <i className="fab fa-facebook-square"></i>
                             </a>
                             
                             <a href="https://github.com/davecade/" target="_blank" rel="noreferrer">
-                                <i className="fab fa-github-square"></i>
+                                <i className="fab fa-github"></i>
                             </a>
 
                             <a href="https://twitter.com/Dave25903679" target="_blank" rel="noreferrer">

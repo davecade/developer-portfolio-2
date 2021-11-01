@@ -8,21 +8,21 @@ const Tab = ({ className, title, current, scroll, activateHome, activateAbout, a
 
     const handleClick = () => {
         switch(title) {
-            
+
             case 'Home':
-                setTimeout(() => activateHome(), 1000)
+                setTimeout(() => activateHome(), 600)
                 break;
     
             case 'About':
-                setTimeout(() => activateAbout(), 1000)
+                setTimeout(() => activateAbout(), 600)
                 break;
 
             case 'Projects':
-                setTimeout(() => activateProjects(), 1000)
+                setTimeout(() => activateProjects(), 600)
                 break;
 
             case 'Contact':
-                setTimeout(() => activateContact(), 1000)
+                setTimeout(() => activateContact(), 600)
                 break;
 
             default:
