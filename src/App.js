@@ -1,7 +1,7 @@
 import './App.scss';
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
-import AbutMe from './components/AboutMe/AboutMe'
+import AboutMe from './components/AboutMe/AboutMe'
 import ProjectCollection from './components/ProjectCollection/ProjectCollection'
 import ContactMe from './components/ContactMe/ContactMe'
 
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <AbutMe />
+      <AboutMe />
       <ProjectCollection />
       <ContactMe />
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/proud.svg'
@@ -7,11 +7,25 @@ import firebase from '../../assets/icons/firebase.svg'
 import nodejs from '../../assets/icons/nodejs.svg'
 import reactjs from '../../assets/icons/react.svg'
 import express from '../../assets/icons/express.svg'
+import useOnScreen from '../OnScreen/OnScreen'
+import { connect } from 'react-redux'
+import { activateAbout } from '../../redux/section/section.actions'
 
-const AboutMe = () => {
+
+const AboutMe = ({ activateAbout }) => {
+
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
+
+    useEffect(() =>{
+        if(isVisible) {
+            activateAbout()
+        }
+    }, [isVisible, activateAbout])
 
     return (
         <div id="about" className="aboutme-section">
+            <div ref={ref}></div>
             <div className="aboutme-container">
                 <div className="image-container">
                     <img className="aboutme-image" src={image} alt="" />
@@ -39,4 +53,8 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe
+const mapDispatchToProps = dispatch => ({
+    activateAbout: () => dispatch(activateAbout())
+})
+
+export default connect(null, mapDispatchToProps)(AboutMe)

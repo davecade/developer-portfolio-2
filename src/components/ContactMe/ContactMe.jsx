@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './ContactMe.scss'
 import Heading from '../Heading/Heading'
 import Button from '../Button/Button'
+import useOnScreen from '../OnScreen/OnScreen'
+import { connect } from 'react-redux'
+import { activateContact } from '../../redux/section/section.actions'
 
-const ContactMe = () => {
+const ContactMe = ({ activateContact }) => {
+
+    const ref = useRef()
+    const isVisible = useOnScreen(ref)
+    
+    useEffect(() =>{
+        if(isVisible) {
+            activateContact()
+        }
+    }, [isVisible, activateContact])
+
     return (
         <div id="contact" className="contact__section">
+            <div ref={ref}></div>
             <Heading className={"contact__heading"} title={"Contact Me"}/>
-
             <div className="contact__content">
                 {/* <div className="contact__info">
                     <h4 className="contact__info__title">Contact info</h4>
@@ -70,4 +83,9 @@ const ContactMe = () => {
     )
 }
 
-export default ContactMe
+const mapDispatchToProps = dispatch => ({
+    activateContact: () => dispatch(activateContact())
+})
+
+
+export default connect(null, mapDispatchToProps)(ContactMe)
