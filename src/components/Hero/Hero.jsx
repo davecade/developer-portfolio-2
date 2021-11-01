@@ -19,9 +19,8 @@ const Hero = ({ activateHome }) => {
 
     return (
         <div id="home" className="hero">
-            <div ref={ref}></div>
             <div className="hero__content">
-                <h1 className="intro">I'm Dave</h1>
+                <h1 ref={ref} className="intro">I'm Dave</h1>
                 <p className="title">Software Developer from Australia. 
                 </p>
                 <Button className={"know-more"} title={"Know More"} link={"#about"} />

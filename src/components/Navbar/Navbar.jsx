@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 import './Navbar.scss'
 import Tab from '../Tab/Tab'
 import { connect } from 'react-redux'
+import { activateHome } from '../../redux/section/section.actions'
 
 
 const navBarTransparent = {
@@ -11,7 +12,7 @@ const navBarSolid = {
     backgroundColor: "rgba(18, 24, 27, 1)"
 }
 
-const Navbar = ({ homeState, aboutState, projectsState, contactState }) => {
+const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHome }) => {
     const [ offset, setOffset ] = useState(0);
     const [ background, setBackground ] = useState({})
 
@@ -20,8 +21,9 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState }) => {
             setBackground(navBarSolid)
         } else {
             setBackground(navBarTransparent)
+            activateHome()
         }
-    }, [offset])
+    }, [offset, activateHome])
 
     useEffect(() => {
         window.onscroll = () => {
@@ -35,7 +37,7 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState }) => {
         <div className="navbar" style={background}>
             <div className="navbar__container">
                 <div className="navbar__logo">
-                    <h1>D.</h1>
+                    <h1><a href="#home">D.</a></h1>
                 </div>
                 <ul className="navbar__tabs">
                     <Tab className="navbar__home" title="Home" scroll="#home" current={homeState ? true : false} />
@@ -56,4 +58,8 @@ const mapStateToProps = state => ({
     contactState: state.section.contact
 })
 
-export default connect(mapStateToProps)(Navbar)
+const mapDispatchToProps = dispatch => ({
+    activateHome: () => dispatch(activateHome())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)

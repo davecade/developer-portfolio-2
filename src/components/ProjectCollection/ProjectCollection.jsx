@@ -22,15 +22,24 @@ const ProjectCollection = ({ activateProjects }) => {
 
     return (
         <div id="projects" className="projects__section">
-            <div ref={ref}></div>
             <div className="projects">
-                <div className="projects__heading__container">
+                <div className="projects__heading__container" >
                     <Heading className={"projects__heading"} title={"Projects"} />    
                 </div>
                 {
-                    projectsArray.map( (project, index) => (
-                        <Project key={index} project={project} />
-                    ))
+                    projectsArray.map( (project, index) => {
+                        if(index === 1) {
+                            return (
+                                <div>
+                                    <Project key={index} project={project} />
+                                    <div ref={ref}></div>
+                                </div>
+                            )
+                            
+                        } else {
+                            return <Project key={index} project={project} />
+                        }
+                    })
                 }
                     <div className="projects__image__container">
                         <img className="projects__image" src={image} alt="" />

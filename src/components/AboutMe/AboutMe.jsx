@@ -25,12 +25,11 @@ const AboutMe = ({ activateAbout }) => {
 
     return (
         <div id="about" className="aboutme-section">
-            <div ref={ref}></div>
             <div className="aboutme-container">
                 <div className="image-container">
                     <img className="aboutme-image" src={image} alt="" />
                 </div>
-                <div className="content">
+                <div className="content" ref={ref}>
                     <Heading className={"aboutme"} title={"About Me"} />
                     <div className="text__container">
                         <p className="text">I'm a Software Developer from Sydney Australia working for a software company called Paladine Systems. I specialize in Web Development using ReactJS.</p>
