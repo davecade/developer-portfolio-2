@@ -11,11 +11,11 @@ import emailjs from 'emailjs-com'
 
 const styles = {
     visible: {
-        //visibility: 'visible',
+        transform: "translateY(0)",
         opacity: '1'
     },
     invisible: {
-        //visibility: 'hidden',
+        transform: "translateY(-1rem)",
         opacity: '0'
     }
 }
@@ -35,7 +35,7 @@ const ContactMe = ({ activateContact }) => {
 
     const manageSentNotice = () => {
         setSentNoticeVisible(true)
-        setTimeout(() => setSentNoticeVisible(false), 3000)
+        setTimeout(() => setSentNoticeVisible(false), 4000)
     }
 
 
@@ -85,7 +85,8 @@ const ContactMe = ({ activateContact }) => {
                     </form>
 
                     <div className="message__sent__conatiner" style={sentNoticeVisible ? styles.visible : styles.invisible}>
-                        <h4 className="message__sent">Message sent!</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <h4 className="message__sent">Message Sent</h4>
                     </div>
                     
                     
