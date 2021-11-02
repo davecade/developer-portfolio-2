@@ -1,3 +1,5 @@
+@import '../../scss-styles/styles.module.scss';
+
 .projects__section {
   width: 100%;
   display: flex;
@@ -5,7 +7,7 @@
   align-items: center;
 
   .projects {
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     flex-direction: column;
     justify-content: center;

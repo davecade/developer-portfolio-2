@@ -5,9 +5,10 @@ import Button from '../Button/Button'
 import useOnScreen from '../OnScreen/OnScreen'
 import { connect } from 'react-redux'
 import { activateContact } from '../../redux/section/section.actions'
+import emailjs from 'emailjs-com'
 
 const ContactMe = ({ activateContact }) => {
-
+    const form = useRef();
     const ref = useRef()
     const isVisible = useOnScreen(ref)
     
@@ -17,45 +18,49 @@ const ContactMe = ({ activateContact }) => {
         }
     }, [isVisible, activateContact])
 
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        console.log(form.current)
+        emailjs.sendForm('service_ze7tl93', 'template_4ngndlk', form.current, 'user_nrBGO1U1IPcSxMQe5wAe6')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+      };
+
     return (
         <div id="contact" className="contact__section">
             <div ref={ref}></div>
             <Heading className={"contact__heading"} title={"Contact Me"}/>
             <div className="contact__content">
-                {/* <div className="contact__info">
-                    <h4 className="contact__info__title">Contact info</h4>
-                    <div className="email__container">
-                        <p>dave.cadelina@outlook.com</p>
-                    </div>
-
-                    <h4 className="contact__info__title">Follow Me</h4>
-                    <div className="icons__container">
-
-                    </div>
-                </div> */}
                 <div className="contact__form__container">
-                    <form className="contact__form">
+                    <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="name__container">
                             <label>NAME</label>
-                            <input type="text" placeholder="Type your name" />
+                            <input type="text" name="name" placeholder="Type your name" />
                         </div>
 
                         <div className="phone__container">
                             <label>PHONE NUMBER</label>
-                            <input type="phone" placeholder="Type your phone number" />
+                            <input type="phone" name="phone" placeholder="Type your phone number" />
                         </div>
 
                         <div className="email__container">
                             <label>EMAIL</label>
-                            <input type="email" placeholder="Type your email" />
+                            <input type="email" name="email" placeholder="Type your email" />
                         </div>
                         
                         <div className="message__container">
                             <label>YOUR MESSAGE</label>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
                         </div>
+
+                        <Button formButton title={"Send Message"} className={"contact__button"} />
                     </form>
-                    <Button title={"Send Message"} className={"contact__button"} />
+                    
                     
                     <div className="social__container">
                         <h4>Follow Me</h4>

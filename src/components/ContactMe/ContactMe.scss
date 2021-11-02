@@ -15,7 +15,7 @@
   }
 
   .contact__content {
-    max-width: 1200px;
+    max-width: $max-width;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -109,6 +109,12 @@
         margin-bottom: 6rem;
         width: 11rem;
         height: 3.5rem;
+        font-weight: bold;
+        font-size: 1.3rem;
+        border-radius: .3rem;
+        transition-property: all;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
       }
 
       .social__container {

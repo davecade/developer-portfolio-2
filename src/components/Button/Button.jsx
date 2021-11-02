@@ -4,7 +4,7 @@ import styles from '../../scss-styles/styles.module.scss';
 import './Button.scss'
 import { activateAbout, activateProjects, activateContact } from '../../redux/section/section.actions'
 
-const Button = ({ className, title, link='', inverse, project, activateAbout, activateProjects, activateContact }) => {
+const Button = ({ className, title, link='', inverse, formButton, project, activateAbout, activateProjects, activateContact }) => {
     const [ buttonStyle, setButtonStyle ] = useState({})
     const [ styleType, setStyleType ] = useState(inverse)
 
@@ -49,8 +49,12 @@ const Button = ({ className, title, link='', inverse, project, activateAbout, ac
     }
 
     return (
-        <button style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>
-            <a href={link} onClick={handleClick} target={project ? "_blank" : "" } rel="noreferrer">{title}</a>
+        <button type={formButton ? "submit" : ""} style={buttonStyle} onMouseEnter={toggleStyle} onMouseLeave={toggleStyle} className={`button ${className}`}>
+            {
+                formButton ? title
+                :
+                <a href={link} onClick={handleClick} target={project ? "_blank" : "" } rel="noreferrer">{title}</a>
+            }
         </button>
     )
 }
