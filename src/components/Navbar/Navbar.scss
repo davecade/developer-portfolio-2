@@ -21,6 +21,11 @@
             color: $primary;
             font-size: 1.5rem;
             cursor: pointer;
+            transition: color .3s ease-out;
+
+            &:hover {
+                color: white;
+            }
         }
     
         .navbar__tabs {
