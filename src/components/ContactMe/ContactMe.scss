@@ -41,6 +41,7 @@
 
     .contact__form__container {
       min-width: 70%;
+
       .contact__form {
         display: grid;
         margin-bottom: 2rem;
@@ -106,7 +107,6 @@
       }
 
       .contact__button {
-        margin-bottom: 6rem;
         width: 11rem;
         height: 3.5rem;
         font-weight: bold;
@@ -115,6 +115,21 @@
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease;
+      }
+
+      .message__sent__conatiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+        background-color: #dff0d8;
+        border-radius: 5px;
+        transition: opacity .3s ease-out;
+
+        .message__sent {
+          color: #2b8ba1;
+          font-size: 1.5rem;
+        }
       }
 
       .social__container {

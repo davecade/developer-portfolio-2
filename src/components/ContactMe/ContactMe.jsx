@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './ContactMe.scss'
 import Heading from '../Heading/Heading'
 import Button from '../Button/Button'
@@ -7,7 +7,22 @@ import { connect } from 'react-redux'
 import { activateContact } from '../../redux/section/section.actions'
 import emailjs from 'emailjs-com'
 
+
+
+const styles = {
+    visible: {
+        //visibility: 'visible',
+        opacity: '1'
+    },
+    invisible: {
+        //visibility: 'hidden',
+        opacity: '0'
+    }
+}
+
+
 const ContactMe = ({ activateContact }) => {
+    const [ sentNoticeVisible, setSentNoticeVisible ] = useState(false)
     const form = useRef();
     const ref = useRef()
     const isVisible = useOnScreen(ref)
@@ -18,17 +33,24 @@ const ContactMe = ({ activateContact }) => {
         }
     }, [isVisible, activateContact])
 
+    const manageSentNotice = () => {
+        setSentNoticeVisible(true)
+        setTimeout(() => setSentNoticeVisible(false), 3000)
+    }
+
 
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log(form.current)
+
         emailjs.sendForm('service_ze7tl93', 'template_4ngndlk', form.current, 'user_nrBGO1U1IPcSxMQe5wAe6')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
               console.log(error.text);
           });
+
           e.target.reset()
+          manageSentNotice();
       };
 
     return (
@@ -37,6 +59,7 @@ const ContactMe = ({ activateContact }) => {
             <Heading className={"contact__heading"} title={"Contact Me"}/>
             <div className="contact__content">
                 <div className="contact__form__container">
+
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="name__container">
                             <label>NAME</label>
@@ -58,8 +81,12 @@ const ContactMe = ({ activateContact }) => {
                             <textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
                         </div>
 
-                        <Button formButton title={"Send Message"} className={"contact__button"} />
+                        <Button formButton title={"Send Message"} className={"contact__button"} />   
                     </form>
+
+                    <div className="message__sent__conatiner" style={sentNoticeVisible ? styles.visible : styles.invisible}>
+                        <h4 className="message__sent">Message sent!</h4>
+                    </div>
                     
                     
                     <div className="social__container">
