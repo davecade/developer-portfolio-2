@@ -93,7 +93,7 @@ const ContactMe = ({ activateContact }) => {
                         <div className="phone__container">
                             <label>PHONE NUMBER</label>
                             <input
-                                type="phone"
+                                type="tel"
                                 name="phone"
                                 onChange={e => setPhone(e.target.value)}
                                 placeholder="Type your phone number"
