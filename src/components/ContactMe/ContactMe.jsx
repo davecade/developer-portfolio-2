@@ -17,12 +17,21 @@ const styles = {
     invisible: {
         transform: "translateY(-1rem)",
         opacity: '0'
+    },
+    redBorder: {
+        border: "1px solid red"
     }
 }
 
 
 const ContactMe = ({ activateContact }) => {
+    const [ name, setName ] = useState('')
+    const [ phone, setPhone ] = useState('')
+    const [ email, setEmail ] = useState('')
+    const [ message, setMessage ] = useState('')
+    const [ messageFailed, setMessageFailed ] = useState(false) 
     const [ sentNoticeVisible, setSentNoticeVisible ] = useState(false)
+
     const form = useRef();
     const ref = useRef()
     const isVisible = useOnScreen(ref)
@@ -41,18 +50,27 @@ const ContactMe = ({ activateContact }) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        if(name && message && (email || phone)) {
+            emailjs.sendForm('service_ze7tl93', 'template_4ngndlk', form.current, 'user_nrBGO1U1IPcSxMQe5wAe6')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+              e.target.reset()
+              setName('')
+              setPhone('')
+              setEmail('')
+              setMessage('')
+              setMessageFailed(false)
+              manageSentNotice();
+        } else {
+            console.log("failed: mandatory fields empty")
+            setMessageFailed(true)
+        }
 
-        emailjs.sendForm('service_ze7tl93', 'template_4ngndlk', form.current, 'user_nrBGO1U1IPcSxMQe5wAe6')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-
-          e.target.reset()
-          manageSentNotice();
-      };
-
+    }
+        
     return (
         <div id="contact" className="contact__section">
             <div ref={ref}></div>
@@ -62,30 +80,54 @@ const ContactMe = ({ activateContact }) => {
 
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="name__container">
-                            <label>NAME</label>
-                            <input type="text" name="name" placeholder="Type your name" />
+                            <label>NAME<span style={messageFailed ? {color: 'red'} : null}>*</span></label>
+                            <input
+                                type="text"
+                                onChange={e => setName(e.target.value)}
+                                name="name"
+                                placeholder="Type your name"
+                                style={(messageFailed && !name) ? {border: '1px solid red'}: null}    
+                            />
                         </div>
 
                         <div className="phone__container">
                             <label>PHONE NUMBER</label>
-                            <input type="phone" name="phone" placeholder="Type your phone number" />
+                            <input
+                                type="phone"
+                                name="phone"
+                                onChange={e => setPhone(e.target.value)}
+                                placeholder="Type your phone number"
+                            />
                         </div>
 
                         <div className="email__container">
-                            <label>EMAIL</label>
-                            <input type="email" name="email" placeholder="Type your email" />
+                            <label>EMAIL<span style={messageFailed ? {color: 'red'} : null}>*</span></label>
+                            <input type="email"
+                                name="email"
+                                onChange={e => setEmail(e.target.value)}
+                                placeholder="Type your email"
+                                style={(messageFailed && !email) ? {border: '1px solid red'}: null}
+                            />
                         </div>
                         
                         <div className="message__container">
-                            <label>YOUR MESSAGE</label>
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                            <label>YOUR MESSAGE<span style={messageFailed ? {color: 'red'} : null}>*</span></label>
+                            <textarea
+                                name="message"
+                                onChange={e => setMessage(e.target.value)}
+                                id=""
+                                cols="30"
+                                rows="10"
+                                placeholder="Type your message here"
+                                style={(messageFailed && !message)  ? {border: '1px solid red'}: null}
+                            ></textarea>
                         </div>
 
                         <Button formButton title={"Send Message"} className={"contact__button"} />   
                     </form>
 
                     <div className="message__sent__conatiner" style={sentNoticeVisible ? styles.visible : styles.invisible}>
-                        <i class="fas fa-check-circle"></i>
+                        <i className="fas fa-check-circle"></i>
                         <h4 className="message__sent">Message Sent</h4>
                     </div>
                     

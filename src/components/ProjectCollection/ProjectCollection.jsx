@@ -30,8 +30,8 @@ const ProjectCollection = ({ activateProjects }) => {
                     projectsArray.map( (project, index) => {
                         if(index === 1) {
                             return (
-                                <div>
-                                    <Project key={index} project={project} />
+                                <div key={index}>
+                                    <Project project={project} />
                                     <div ref={ref}></div>
                                 </div>
                             )
