@@ -46,6 +46,9 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
                     <Tab className="navbar__contact" title="Contact" scroll="#contact" current={contactState ? true : false}/>
                     {/* <Tab className="navbar__blog" title="Blog" /> */}
                 </ul>
+                <div className="navbar__list__tabs">
+                    
+                </div>
             </div>
         </div>
     )
