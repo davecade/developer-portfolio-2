@@ -47,7 +47,10 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
                     {/* <Tab className="navbar__blog" title="Blog" /> */}
                 </ul>
                 <div className="navbar__list__tabs">
-                    
+                    <input type="checkbox" class="toggler" />
+                    <div class="hamburger">
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
