@@ -15,6 +15,7 @@ const navBarSolid = {
 const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHome }) => {
     const [ offset, setOffset ] = useState(0);
     const [ background, setBackground ] = useState({})
+    const [ windowWidth, setWindowWidth ] = useState(null)
 
     const handleScroll = useCallback(() => {
         if(offset > 20) {
@@ -26,10 +27,19 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
     }, [offset, activateHome])
 
     useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, [setWindowWidth])
+
+    useEffect(() => {
         window.onscroll = () => {
             setOffset(window.pageYOffset)
             handleScroll()
         }
+
+        window.onresize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+
     }, [handleScroll]);
 
 
@@ -39,19 +49,22 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
                 <div className="navbar__logo">
                     <h1><a href="#home">D.</a></h1>
                 </div>
-                <ul className="navbar__tabs">
-                    <Tab className="navbar__home" title="Home" scroll="#home" current={homeState ? true : false} />
-                    <Tab className="navbar__about" title="About" scroll="#about" current={aboutState ? true : false} />
-                    <Tab className="navbar__projects" title="Projects" scroll="#projects" current={projectsState ? true : false}/>
-                    <Tab className="navbar__contact" title="Contact" scroll="#contact" current={contactState ? true : false}/>
-                    {/* <Tab className="navbar__blog" title="Blog" /> */}
-                </ul>
-                <div className="navbar__list__tabs">
-                    <input type="checkbox" class="toggler" />
-                    <div class="hamburger">
-                        <div></div>
+                {
+                    windowWidth > 800 ?
+                    <ul className="navbar__tabs">
+                        <Tab className="navbar__home" title="Home" scroll="#home" current={homeState ? true : false} />
+                        <Tab className="navbar__about" title="About" scroll="#about" current={aboutState ? true : false} />
+                        <Tab className="navbar__projects" title="Projects" scroll="#projects" current={projectsState ? true : false}/>
+                        <Tab className="navbar__contact" title="Contact" scroll="#contact" current={contactState ? true : false}/>
+                    </ul>
+                    :
+                    <div className="navbar__list__tabs">
+                        <input type="checkbox" className="toggler" />
+                        <div className="hamburger">
+                            <div></div>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
         </div>
     )
