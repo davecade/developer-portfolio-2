@@ -11,6 +11,10 @@
         color: $text-body;
         font-size: 3rem;
         margin-bottom: .8rem;
+
+        @media (max-width: 400px) {
+            font-size: 2rem;
+        }
     }
     
     .underline {
