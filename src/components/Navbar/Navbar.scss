@@ -8,8 +8,6 @@
     transition: background .5s ease-in-out;
     z-index: 10;
     
-
-
     .navbar__container {
         width: 90%;
         max-width: $max-width;
@@ -36,7 +34,8 @@
             align-items: center;
         }
 
-        .navbar__list__tabs {
+        .hamburger__container {
+            position: relative;
 
             .toggler {
                 position: absolute;
@@ -96,6 +95,15 @@
             .toggler:checked + .hamburger > div:after {
                 display: none;
             }
+
+        }
+
+        .navbar__tabs__list {
+            background-color: $bg-darker;
+            position: fixed;
+            top: 4rem;
+            right: 2.5rem;
+            transition: all .4s ease-out;
         }
     }
 

@@ -4,7 +4,7 @@ import styles from '../../scss-styles/styles.module.scss';
 import { connect } from 'react-redux';
 import { activateHome, activateAbout, activateProjects, activateContact } from '../../redux/section/section.actions'
 
-const Tab = ({ className, title, current, scroll, activateHome, activateAbout, activateProjects, activateContact }) => {
+const Tab = ({ className, title, current, setTabsOpen, scroll, activateHome, activateAbout, activateProjects, activateContact }) => {
 
     const handleClick = () => {
         switch(title) {

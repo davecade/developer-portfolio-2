@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback, Fragment, useRef } from 'react'
 import './Navbar.scss'
 import Tab from '../Tab/Tab'
 import { connect } from 'react-redux'
@@ -16,6 +16,18 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
     const [ offset, setOffset ] = useState(0);
     const [ background, setBackground ] = useState({})
     const [ windowWidth, setWindowWidth ] = useState(null)
+    const [ tabsOpen, setTabsOpen ] = useState(false)
+    const toggler = useRef()
+
+    const handleClick = () => {
+        if(toggler.current) {
+            if(toggler.current.checked) {
+                setTabsOpen(true)
+            } else {
+                setTabsOpen(false)
+            }
+        }
+    }
 
     const handleScroll = useCallback(() => {
         if(offset > 20) {
@@ -58,12 +70,23 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
                         <Tab className="navbar__contact" title="Contact" scroll="#contact" current={contactState ? true : false}/>
                     </ul>
                     :
-                    <div className="navbar__list__tabs">
-                        <input type="checkbox" className="toggler" />
-                        <div className="hamburger">
-                            <div></div>
+                    <Fragment>
+                        <div className="hamburger__container">
+                            <input ref={toggler} onClick={handleClick} type="checkbox" className="toggler" />
+                            <div className="hamburger">
+                                <div></div>
+                            </div>
                         </div>
-                    </div>
+                        <div className="navbar__tabs__list" style={{
+                            visibility: tabsOpen ? 'visible' : 'hidden',
+                            opacity: tabsOpen ? '1' : '0'
+                        }}>
+                            <Tab className="navbar__home" title="Home" scroll="#home" current={homeState ? true : false} />
+                            <Tab className="navbar__about" title="About" scroll="#about" current={aboutState ? true : false} />
+                            <Tab className="navbar__projects" title="Projects" scroll="#projects" current={projectsState ? true : false}/>
+                            <Tab className="navbar__contact" title="Contact" scroll="#contact" current={contactState ? true : false}/>
+                        </div>
+                    </Fragment>
                 }
             </div>
         </div>
