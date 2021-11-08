@@ -46,7 +46,7 @@ const AboutMe = ({ activateAbout }) => {
                 <div className="content" ref={ref} style={loaded ? entranceStyle : null}>
                     <Heading className={"aboutme"} title={"About Me"} />
                     <div className="text__container">
-                        <p className="text">My work experience and background is mainly in the telecommunications industry, but because I was very passionate about coding, I decided to pursue a career in software development. I specialize in Web Development using ReactJS.</p>
+                        <p className="text">I'm a Font-End developer eager to further my career in the software engineering industry. My work experience and background is mainly in the telecommunications industry, but because I was very passionate about coding, I decided to pursue a career in software development. I specialize in Web Development using ReactJS.</p>
                         <p className="text">Technology Stack: Firebase, Express, React, NodeJS.</p>
                         <div className="tech">
                             <img src={firebase} alt="" className="stack__image" />

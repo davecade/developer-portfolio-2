@@ -12,11 +12,17 @@ const navBarSolid = {
     backgroundColor: "rgba(18, 24, 27, 1)"
 }
 
+const fadeIn = {
+    visibility: 'visible',
+    opacity: '1',
+}
+
 const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHome }) => {
     const [ offset, setOffset ] = useState(0);
     const [ background, setBackground ] = useState({})
     const [ windowWidth, setWindowWidth ] = useState(null)
     const [ tabsOpen, setTabsOpen ] = useState(false)
+    const [ fadeInNav, setfadeInNav ] = useState(false)
     const toggler = useRef()
 
     const handleClick = () => {
@@ -34,9 +40,18 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
             setBackground(navBarSolid)
         } else {
             setBackground(navBarTransparent)
-            activateHome()
         }
-    }, [offset, activateHome])
+    }, [offset])
+
+    // eslint-disable-next-line
+    useEffect(() => {
+        setOffset(window.pageYOffset)
+        handleScroll()
+    })
+
+    useEffect(() => {
+        setTimeout(() => setfadeInNav(true), 300)
+    }, [])
 
     useEffect(() => {
         setWindowWidth(window.innerWidth)
@@ -57,7 +72,7 @@ const Navbar = ({ homeState, aboutState, projectsState, contactState, activateHo
 
     return (
         <div className="navbar" style={background}>
-            <div className="navbar__container">
+            <div className="navbar__container" style={fadeInNav ? fadeIn : null}>
                 <div className="navbar__logo">
                     <h1><a href="#home">D.</a></h1>
                 </div>
