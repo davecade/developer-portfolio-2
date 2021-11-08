@@ -26,7 +26,7 @@
         @extend %entry-left;
 
         @media (max-width: 900px) {
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 5rem;
         }
 
@@ -51,7 +51,7 @@
             font-size: 1rem;
 
             @media (max-width: 900px) {
-                text-align: center;
+                text-align: start;
             }
 
             @media (max-width: 400px) {
@@ -97,11 +97,11 @@
                     width: 8rem;
                 }
 
-                @media (max-width: 600px) {
-                    margin-right: .5;
-                    height: 2.5rem;
-                    width: 7rem;
-                }
+                // @media (max-width: 400px) {
+                //     margin-right: .5;
+                //     height: 2.5rem;
+                //     width: 7rem;
+                // }
         }
         }
     }
@@ -114,7 +114,6 @@
             align-items: center;
             width: 100%;
             border: 1px solid $primary;
-            //box-shadow: rgba(82, 108, 254, 0.3) 0px 19px 38px, rgba(82, 108, 254, 0.22) 0px 15px 12px;
             box-shadow: rgba(83, 109, 254, 0.3) 0px 19px 38px, rgba(83, 109, 254, 0.22) 0px 15px 12px;
     
     
@@ -124,29 +123,31 @@
     
             .image {
                 width: 40rem;
-    
-                @media (max-width: 1300px) {
-                    width: 30rem;
+
+                @media (max-width: 900px) {
+                    width: 100%;
                 }
     
-                @media (max-width: 600px) {
-                    width: 25rem;
-                }
+                // @media (max-width: 1300px) {
+                //     width: 30rem;
+                // }
     
-                @media (max-width: 500px) {
-                    width: 20rem;
-                }
+                // @media (max-width: 600px) {
+                //     width: 25rem;
+                // }
     
-                @media (max-width: 400px) {
-                    width: 17rem;
-                }
+                // @media (max-width: 500px) {
+                //     width: 20rem;
+                // }
     
-                @media (max-width: 350px) {
-                    width: 15rem;
-                }
+                // @media (max-width: 400px) {
+                //     width: 17rem;
+                // }
+    
+                // @media (max-width: 350px) {
+                //     width: 15rem;
+                // }
             }
         }
     }
 }
-
-//#6dbe4b
