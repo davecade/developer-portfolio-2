@@ -46,7 +46,7 @@ const AboutMe = ({ activateAbout }) => {
                 <div className="content" ref={ref} style={loaded ? entranceStyle : null}>
                     <Heading className={"aboutme"} title={"About Me"} />
                     <div className="text__container">
-                        <p className="text">I'm a Software Developer from Sydney Australia working for a software company called Paladine Systems. I specialize in Web Development using ReactJS.</p>
+                        <p className="text">I'm a Software Developer from Sydney Australia. I specialize in Web Development using ReactJS.</p>
                         <p className="text">The Technology Stack I use: Firebase, Express, React, NodeJS.</p>
                         <div className="tech">
                             <img src={firebase} alt="" className="stack__image" />
