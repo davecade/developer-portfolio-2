@@ -38,13 +38,17 @@
         font-size: 4rem;
       }
 
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+
       @media (max-width: 400px) {
         font-size: 2rem;
       }
 
-      @media (max-height: 700px) {
-        font-size: 2rem;
-      }
+      // @media (max-height: 700px) {
+      //   font-size: 2rem;
+      // }
     }
 
     .title {
@@ -57,13 +61,17 @@
         font-size: 1.4rem;
       }
 
+      @media (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+
       @media (max-width: 400px) {
         font-size: 1rem;
       }
 
-      @media (max-height: 700px) {
-        font-size: 1.4rem;
-      }
+      // @media (max-height: 700px) {
+      //   font-size: 1.4rem;
+      // }
     }
 
     .know-more {
@@ -92,17 +100,21 @@
         width: 17rem;
       }
 
+      @media (max-width: 600px) {
+        width: 14rem
+      }
+
       @media (max-width: 400px) {
         width: 12rem;
       }
 
-      @media (max-height: 800px) {
-        width: 17rem;
-      }
+      // @media (max-height: 800px) {
+      //   width: 17rem;
+      // }
 
-      @media (max-height: 700px) and (max-width: 900px) {
-        width: 10rem;
-      }
+      // @media (max-height: 700px) and (max-width: 900px) {
+      //   width: 10rem;
+      // }
     }
   }
 }
