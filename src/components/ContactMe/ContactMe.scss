@@ -47,7 +47,7 @@
       @extend %entry-left;
 
       @media (max-width: 900px) {
-        width: 90%;
+        width: 100%;
       }
 
       .contact__form {
@@ -59,12 +59,21 @@
           "message message";
         grid-gap: 2rem;
 
-        @media (max-width: 600px) {
+        @media (max-width: 900px) {
           grid-template-areas:
             "name name"
             "phone phone"
             "email email"
             "message message";
+        }
+
+        @media (max-width: 900px) {
+          grid-template-areas:
+            "name"
+            "phone"
+            "email"
+            "message";
+          grid-gap: 1rem;
         }
 
         .name__container {
