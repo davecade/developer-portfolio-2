@@ -60,6 +60,15 @@
 
         @media (max-width: 900px) {
           grid-template-areas:
+            "name name"
+            "phone email"
+            "message message";
+          grid-gap: 1rem;
+          padding: 0 1rem;
+        }
+
+        @media (max-width: 400px) {
+          grid-template-areas:
             "name"
             "phone"
             "email"
@@ -103,13 +112,10 @@
           border: 1px solid #414a57;
           padding: 1rem;
           color: $text-body;
+          width: 100%;
 
           &::placeholder {
             color: $text-body;
-          }
-
-          @media (max-width: 900px) {
-            width: 100%;
           }
         }
 
@@ -120,10 +126,7 @@
           font-family: inherit;
           outline: none;
           border: none;
-          
-          @media (max-width: 900px) {
-            width: 100%;
-          }
+          width: 100%;
 
           &::placeholder {
             color: $text-body;
