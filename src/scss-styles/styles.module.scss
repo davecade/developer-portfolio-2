@@ -20,29 +20,29 @@ $max-width: 75rem;
 }
 
 %entry-top {
-    transition: all 1s ease-out;
-    transform: translateY(-300px);
+    transition: all 0.7s ease-out;
+    transform: translateY(-60px);
     visibility: hidden;
     opacity: 0;
 }
 
 %entry-right {
-    transition: all 1s ease-out;
-    transform: translateX(300px);
+    transition: all 0.7s ease-out;
+    transform: translateX(60px);
     visibility: hidden;
     opacity: 0;
 }
 
 %entry-bottom {
-    transition: all 1s ease-out;
-    transform: translateY(300px);
+    transition: all 0.7s ease-out;
+    transform: translateY(60px);
     visibility: hidden;
     opacity: 0;
 }
 
 %entry-left {
-    transition: all 1s ease-out;
-    transform: translateX(-300px);
+    transition: all 0.7s ease-out;
+    transform: translateX(-60px);
     visibility: hidden;
     opacity: 0;
 }

@@ -1,0 +1,19 @@
+@import "../../scss-styles/styles.module.scss";
+
+
+.footer__container {
+    background-color: $bg-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-top: 1px solid $bg-darker;
+
+    p {
+        color: $text-body;
+
+        span {
+            color: $primary;
+        }
+    }
+}

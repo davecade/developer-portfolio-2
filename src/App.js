@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero'
 import AboutMe from './components/AboutMe/AboutMe'
 import ProjectCollection from './components/ProjectCollection/ProjectCollection'
 import ContactMe from './components/ContactMe/ContactMe'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <AboutMe />
       <ProjectCollection />
       <ContactMe />
+      <Footer />
     </div>
   );
 }
