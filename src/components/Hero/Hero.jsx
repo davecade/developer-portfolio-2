@@ -18,8 +18,10 @@ const Hero = ({ activateHome }) => {
     const isVisible = useOnScreen(ref)
 
     useEffect(() => {
-        setTimeout(()=> setLoaded(true), 300)
-    }, [])
+        if(isVisible){
+            setTimeout(()=> setLoaded(true), 300)
+        }
+    }, [isVisible])
 
     useEffect(() =>{
         if(isVisible) {

@@ -18,3 +18,31 @@ $max-width: 75rem;
     bgDarker: $bg-darker;
     bgLight: $bg-light;
 }
+
+%entry-top {
+    transition: all 1s ease-out;
+    transform: translateY(-300px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+%entry-right {
+    transition: all 1s ease-out;
+    transform: translateX(300px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+%entry-bottom {
+    transition: all 1s ease-out;
+    transform: translateY(300px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+%entry-left {
+    transition: all 1s ease-out;
+    transform: translateX(-300px);
+    visibility: hidden;
+    opacity: 0;
+}

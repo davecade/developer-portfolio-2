@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/proud.svg'
@@ -11,11 +11,25 @@ import useOnScreen from '../OnScreen/OnScreen'
 import { connect } from 'react-redux'
 import { activateAbout } from '../../redux/section/section.actions'
 
+const entranceStyle = {
+    transform: "translateX(0px)",
+    visibility: "visible",
+    opacity: "1"
+}
+
 
 const AboutMe = ({ activateAbout }) => {
-
+    const [ loaded, setLoaded ] = useState(false)
     const ref = useRef()
     const isVisible = useOnScreen(ref)
+
+    useEffect(() => {
+        
+        if(isVisible) {
+            setTimeout(()=> setLoaded(true), 300)
+        }
+        
+    }, [isVisible])
 
     useEffect(() =>{
         if(isVisible) {
@@ -26,10 +40,10 @@ const AboutMe = ({ activateAbout }) => {
     return (
         <div id="about" className="aboutme-section">
             <div className="aboutme-container">
-                <div className="image-container">
+                <div className="image-container" style={loaded ? entranceStyle : null}>
                     <img className="aboutme-image" src={image} alt="" />
                 </div>
-                <div className="content" ref={ref}>
+                <div className="content" ref={ref} style={loaded ? entranceStyle : null}>
                     <Heading className={"aboutme"} title={"About Me"} />
                     <div className="text__container">
                         <p className="text">I'm a Software Developer from Sydney Australia working for a software company called Paladine Systems. I specialize in Web Development using ReactJS.</p>

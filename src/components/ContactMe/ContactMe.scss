@@ -10,33 +10,41 @@
   align-items: center;
   min-height: 100vh;
 
-  .contact__heading {
-    margin-bottom: 3rem;
+  @media (max-width: 900px) {
+    padding-top: 5rem;
+  }
 
-    .title {
+  .contact__heading__container {
+    @extend %entry-top;
 
-      @media (max-width: 400px) {
-        font-size: 2rem;
+    .contact__heading {
+      margin-bottom: 3rem;
+
+      .title {
+        @media (max-width: 400px) {
+          font-size: 2rem;
+        }
       }
     }
-
   }
 
   .contact__content {
     max-width: $max-width;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     margin-bottom: 10rem;
     padding: 1rem;
-    
+
     @media (max-width: 400px) {
       justify-content: center;
     }
 
     .contact__form__container {
       min-width: 70%;
+      @extend %entry-left;
 
       @media (max-width: 900px) {
         min-width: 90%;
@@ -57,10 +65,10 @@
 
         @media (max-width: 600px) {
           grid-template-areas:
-          "name name"
-          "phone phone"
-          "email email"
-          "message message";
+            "name name"
+            "phone phone"
+            "email email"
+            "message message";
         }
 
         .name__container {
@@ -123,7 +131,7 @@
         height: 3.5rem;
         font-weight: bold;
         font-size: 1.3rem;
-        border-radius: .3rem;
+        border-radius: 0.3rem;
         transition-property: all;
         transition-duration: 0.3s;
         transition-timing-function: ease;
@@ -141,7 +149,7 @@
         align-items: center;
         margin-bottom: 4rem;
         background-color: #dff2bf;
-        transition: all .3s ease-out;
+        transition: all 0.3s ease-out;
         border-radius: 1rem;
 
         .fa-check-circle {
@@ -155,56 +163,54 @@
           font-size: 1.5rem;
         }
       }
+    }
 
-      .social__container {
+    .social__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @extend %entry-top;
+
+      h4 {
+        color: $text-heading;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .social__icons {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        h4 {
-          color: $text-heading;
-          font-size: 2rem;
-          margin-bottom: 1.5rem;
-        }
+        a {
+          i {
+            color: #94a0af;
+            margin: 0 1.5rem;
+            font-size: 3rem;
+            transition: all 0.3s ease-out;
 
-        .social__icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                i {
-                    color: #94a0af;
-                    margin: 0 1.5rem;
-                    font-size: 3rem;
-                    transition: all .3s ease-out;
-
-                    @media (max-width: 400px) {
-                      font-size: 2rem;
-                    }
-
-                    &:hover{
-                      transform: scale(1.2);
-                    }
-                  }
-
-                .fa-facebook-square {
-                  color: $primary-light;
-                }
-
-                .fa-github {
-                  color: $primary-light;
-                }
-
-                .fa-twitter {
-                  color: $primary-light;
-                }
+            @media (max-width: 400px) {
+              font-size: 2rem;
             }
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+
+          .fa-facebook-square {
+            color: $primary-light;
+          }
+
+          .fa-github {
+            color: $primary-light;
+          }
+
+          .fa-twitter {
+            color: $primary-light;
+          }
         }
-
-
-
       }
     }
   }

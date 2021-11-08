@@ -23,6 +23,18 @@ const styles = {
     }
 }
 
+const entranceStyleY = {
+    transform: "translateY(0px)",
+    visibility: "visible",
+    opacity: "1"
+}
+
+const entranceStyleX = {
+    transform: "translateX(0px)",
+    visibility: "visible",
+    opacity: "1"
+}
+
 
 const ContactMe = ({ activateContact }) => {
     const [ name, setName ] = useState('')
@@ -32,9 +44,35 @@ const ContactMe = ({ activateContact }) => {
     const [ messageFailed, setMessageFailed ] = useState(false) 
     const [ sentNoticeVisible, setSentNoticeVisible ] = useState(false)
 
+    //--fade in
+    const [ loadedHeading, setLoadedHeading ] = useState(false)
+    const [ loadedForm, setLoadedForm ] = useState(false)
+    const [ loadedSocial, setLoadedSocial ] = useState(false)
+    const formRef = useRef()
+    const socialRef = useRef()
+    const formVisible = useOnScreen(formRef)
+    const socialVisible = useOnScreen(socialRef)
+
+    //-- tab highlight
     const form = useRef();
     const ref = useRef()
     const isVisible = useOnScreen(ref)
+
+    useEffect(() => {
+
+        if(isVisible){
+            setTimeout(()=> setLoadedHeading(true), 300)
+        }
+
+        if(formVisible){
+            setTimeout(()=> setLoadedForm(true), 300)
+        }
+
+        if(socialVisible){
+            setTimeout(()=> setLoadedSocial(true), 300)
+        }
+
+    }, [isVisible, formVisible, socialVisible])
     
     useEffect(() =>{
         if(isVisible) {
@@ -73,11 +111,11 @@ const ContactMe = ({ activateContact }) => {
         
     return (
         <div id="contact" className="contact__section">
-            <div ref={ref}></div>
-            <Heading className={"contact__heading"} title={"Contact Me"}/>
+            <div ref={ref} className="contact__heading__container" style={loadedHeading ? entranceStyleY : null}>
+                <Heading className={"contact__heading"} title={"Contact Me"}/>
+            </div>
             <div className="contact__content">
-                <div className="contact__form__container">
-
+                <div className="contact__form__container" ref={formRef} style={loadedForm ? entranceStyleX : null}>
                     <form ref={form} onSubmit={sendEmail} className="contact__form">
                         <div className="name__container">
                             <label>NAME<span style={messageFailed ? {color: 'red'} : null}>*</span></label>
@@ -130,25 +168,23 @@ const ContactMe = ({ activateContact }) => {
                         <i className="fas fa-check-circle"></i>
                         <h4 className="message__sent">Message Sent</h4>
                     </div>
-                    
-                    
-                    <div className="social__container">
-                        <h4>Follow Me</h4>
-                        <div className="social__icons">
-                            
-                            <a href="https://www.facebook.com/dave.cadelina" target="_blank" rel="noreferrer">
-                                <i className="fab fa-facebook-square"></i>
-                            </a>
-                            
-                            <a href="https://github.com/davecade/" target="_blank" rel="noreferrer">
-                                <i className="fab fa-github"></i>
-                            </a>
+                </div>
+                <div className="social__container" ref={socialRef} style={loadedSocial ? entranceStyleY : null}>
+                    <h4>Follow Me</h4>
+                    <div className="social__icons">
+                        
+                        <a href="https://www.facebook.com/dave.cadelina" target="_blank" rel="noreferrer">
+                            <i className="fab fa-facebook-square"></i>
+                        </a>
+                        
+                        <a href="https://github.com/davecade/" target="_blank" rel="noreferrer">
+                            <i className="fab fa-github"></i>
+                        </a>
 
-                            <a href="https://twitter.com/Dave25903679" target="_blank" rel="noreferrer">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                            
-                        </div>
+                        <a href="https://twitter.com/Dave25903679" target="_blank" rel="noreferrer">
+                            <i className="fab fa-twitter"></i>
+                        </a>
+                        
                     </div>
                 </div>
 

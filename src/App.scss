@@ -41,7 +41,7 @@ a:active {
 
 .App {
   background-color: $bg-dark;
-  //background-color: #353434;
+  overflow-x: hidden;
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
 }
