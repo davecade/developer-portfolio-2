@@ -46,8 +46,7 @@
       @extend %entry-left;
 
       @media (max-width: 900px) {
-        min-width: 100%;
-        width: 100%;
+        width: 50%;
       }
 
       .contact__form {
