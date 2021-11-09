@@ -19,14 +19,25 @@ const entranceStyle = {
 
 
 const AboutMe = ({ activateAbout }) => {
-    const [ loaded, setLoaded ] = useState(false)
+    const [ loadedImage, setLoadedImage ] = useState(false)
+    const [ loadedHeading, setLoadedHeading ] = useState(false)
+    const [ loadedText1, setLoadedText1 ] = useState(false)
+    const [ loadedText2, setLoadedText2 ] = useState(false)
+    const [ loadedTech, setLoadedTech ] = useState(false)
+    const [ loadedButtons, setLoadedButtons ] = useState(false)
     const ref = useRef()
     const isVisible = useOnScreen(ref)
 
     useEffect(() => {
         
         if(isVisible) {
-            setTimeout(()=> setLoaded(true), 300)
+
+            setTimeout(()=> setLoadedHeading(true), 300)
+            setTimeout(()=> setLoadedText1(true), 500)
+            setTimeout(()=> setLoadedText2(true), 700)
+            setTimeout(()=> setLoadedTech(true), 900)
+            setTimeout(()=> setLoadedButtons(true), 1100)
+            setTimeout(()=> setLoadedImage(true), 1300)
         }
         
     }, [isVisible])
@@ -40,24 +51,28 @@ const AboutMe = ({ activateAbout }) => {
     return (
         <div id="about" className="aboutme-section">
             <div className="aboutme-container">
-                <div className="image-container" style={loaded ? entranceStyle : null}>
+                <div className="image-container" style={loadedImage ? entranceStyle : null}>
                     <img className="aboutme-image" src={image} alt="" />
                 </div>
-                <div className="content" ref={ref} style={loaded ? entranceStyle : null}>
-                    <Heading className={"aboutme"} title={"About Me"} />
+                <div className="content" ref={ref}>
+                    <Heading className={"aboutme"} title={"About Me"} style={loadedHeading ? entranceStyle : null}/>
                     <div className="text__container">
-                        <p className="text">I'm a Font-End developer eager to further my career in the software engineering industry. My work experience and background is mainly in the telecommunications industry, but because I was very passionate about coding, I decided to pursue a career in software development. I specialize in Web Development using ReactJS.</p>
-                        <p className="text">Technology Stack: Firebase, Express, React, NodeJS.</p>
-                        <div className="tech">
+                        <p className="text" style={loadedText1 ? entranceStyle : null}>
+                            I'm a Font-End developer eager to further my career in the software engineering industry. My work experience and background is mainly in the telecommunications industry, but because I was very passionate about coding, I decided to pursue a career in software development. I specialize in Web Development using ReactJS.
+                        </p>
+                        <p className="text" style={loadedText2 ? entranceStyle : null}>
+                            Technology Stack: Firebase, Express, React, NodeJS.
+                        </p>
+                        <div className="tech" style={loadedTech ? entranceStyle : null}>
                             <img src={firebase} alt="" className="stack__image" />
                             <img src={express} alt="" className="stack__image" />
                             <img src={reactjs} alt="" className="stack__image" />   
                             <img src={nodejs} alt="" className="stack__image" />
                         </div>
                     </div>
-                    <div className="buttons-container">
-                        <Button className={"about-button"} title={"View Projects"} link={"#projects"} />
-                        <Button className={"about-button"} title={"Request CV"} link={"#contact"} inverse />
+                    <div className="buttons-container" style={loadedButtons ? entranceStyle : null}>
+                        <Button className={"about__view__projets"} title={"View Projects"} link={"#projects"} />
+                        <Button className={"about__request__cv"} title={"Request CV"} link={"#contact"} inverse />
                     </div>
 
                 </div>
