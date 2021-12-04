@@ -22,7 +22,6 @@ const AboutMe = ({ activateAbout }) => {
     const [ loadedImage, setLoadedImage ] = useState(false)
     const [ loadedHeading, setLoadedHeading ] = useState(false)
     const [ loadedText1, setLoadedText1 ] = useState(false)
-    const [ loadedText2, setLoadedText2 ] = useState(false)
     const [ loadedTech, setLoadedTech ] = useState(false)
     const [ loadedButtons, setLoadedButtons ] = useState(false)
     const ref = useRef()
@@ -34,7 +33,6 @@ const AboutMe = ({ activateAbout }) => {
 
             setTimeout(()=> setLoadedHeading(true), 300)
             setTimeout(()=> setLoadedText1(true), 500)
-            setTimeout(()=> setLoadedText2(true), 700)
             setTimeout(()=> setLoadedTech(true), 900)
             setTimeout(()=> setLoadedButtons(true), 1100)
             setTimeout(()=> setLoadedImage(true), 1300)
