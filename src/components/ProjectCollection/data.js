@@ -58,15 +58,15 @@ const projectsArray = [
         title: "Dave's Pokedex",
         description: `
             When I was a kid, I was a huge fan of Pokemon. So creating this app was like making
-            one of my childhood dreams a reality. This was made using ReactJS. Utilizing a 3rd
-            party RESTful API for Pokemon data, it displays information about 151 different Pokemon.
-            React Libraries included are: Redux for state management and Redux Sagas to manage API
-            calls. Responsive Design
+            one of my childhood dreams a reality. This was made using ReactJS for the fontend,
+            and NodeJS for the backend. Utilizing a 3rd party RESTful API for Pokemon data, it
+            displays information about 151 different Pokemon. React Libraries included are: Redux
+            for state management.
         `,
         image: pokemonImage,
         url: 'https://daves-pokedex-live.herokuapp.com/',
         github: 'https://github.com/davecade/pokedex',
-        technologies: [reactIcon, reduxIcon, herokuIcon]
+        technologies: [reactIcon, reduxIcon, nodejsIcon, herokuIcon]
     },
     {
         title: "Visual Sorting",
