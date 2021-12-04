@@ -58,10 +58,7 @@ const AboutMe = ({ activateAbout }) => {
                     <Heading className={"aboutme"} title={"About Me"} style={loadedHeading ? entranceStyle : null}/>
                     <div className="text__container">
                         <p className="text" style={loadedText1 ? entranceStyle : null}>
-                            I'm a Software developer eager to further my career in the software engineering industry. My work experience and background is mainly in the telecommunications industry, but because I was very passionate about coding, I decided to pursue a career in software development. I specialize in Web Development using ReactJS.
-                        </p>
-                        <p className="text" style={loadedText2 ? entranceStyle : null}>
-                            Technology Stack: Firebase, Express, React, NodeJS.
+                            I'm a Software developer from Sydney Australia. I specialize in creating web applications using the FERN stack (Firebase, Express, React, Node).
                         </p>
                         <div className="tech" style={loadedTech ? entranceStyle : null}>
                             <img src={firebase} alt="" className="stack__image" />
@@ -72,7 +69,7 @@ const AboutMe = ({ activateAbout }) => {
                     </div>
                     <div className="buttons-container" style={loadedButtons ? entranceStyle : null}>
                         <Button className={"about__view__projets"} title={"View Projects"} link={"#projects"} />
-                        <Button className={"about__request__cv"} title={"Request CV"} link={"#contact"} inverse />
+                        <Button className={"about__request__cv"} title={"Hire Me"} link={"#contact"} inverse />
                     </div>
 
                 </div>
