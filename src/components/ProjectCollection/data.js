@@ -66,7 +66,7 @@ const projectsArray = [
         image: pokemonImage,
         url: 'https://daves-pokedex-live.herokuapp.com/',
         github: 'https://github.com/davecade/pokedex',
-        technologies: [reactIcon, reduxIcon, nodejsIcon, herokuIcon]
+        technologies: [reactIcon, reduxIcon, expressIcon, nodejsIcon, herokuIcon]
     },
     {
         title: "Visual Sorting",
