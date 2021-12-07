@@ -19,11 +19,10 @@ const projectsArray = [
     {
         title: "Netflix Clone",
         description: `
-            Recreating Netflix Font-End. Created using ReactJS Frontend and NodeJS Backend.
-            Utilitizing an API from themoviedb.org, This web app mimics the Netflix website
-            funcitonality. For embedding youtube trailers, I used the following libraries:
-            react-youtube and movie-trailer. Redux / Redux Sagas for state management.
-            Hosted on Heroku.
+            Created using ReactJS Frontend and NodeJS Backend. This app uses an API from
+            themoviedb.org, and mimics the Netflix website funcitonality. For embedding
+            youtube trailers, I used the following libraries: react-youtube and movie-trailer.
+            Redux / Redux Sagas for state management.Hosted on Heroku.
         `,
         image: netflixImage,
         url: 'https://netflix-clone-live.herokuapp.com/',
