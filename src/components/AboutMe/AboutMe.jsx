@@ -3,7 +3,7 @@ import './AboutMe.scss'
 import Heading from '../Heading/Heading'
 import image from '../../assets/proud.svg'
 import Button from '../Button/Button'
-import firebase from '../../assets/icons/firebase.svg'
+import mongodb from '../../assets/icons/mongodb.svg'
 import nodejs from '../../assets/icons/nodejs.svg'
 import reactjs from '../../assets/icons/react.svg'
 import express from '../../assets/icons/express.svg'
@@ -56,10 +56,10 @@ const AboutMe = ({ activateAbout }) => {
                     <Heading className={"aboutme"} title={"About Me"} style={loadedHeading ? entranceStyle : null}/>
                     <div className="text__container">
                         <p className="text" style={loadedText1 ? entranceStyle : null}>
-                            I'm a Software developer from Sydney Australia. I specialize in creating web applications using the FERN stack (Firebase, Express, React, Node).
+                            I'm a Software developer from Sydney Australia. I specialize in creating web applications using the FERN stack (MongoDB, Express, React, Node).
                         </p>
                         <div className="tech" style={loadedTech ? entranceStyle : null}>
-                            <img src={firebase} alt="" className="stack__image" />
+                            <img src={mongodb} alt="" className="stack__image" />
                             <img src={express} alt="" className="stack__image" />
                             <img src={reactjs} alt="" className="stack__image" />   
                             <img src={nodejs} alt="" className="stack__image" />
