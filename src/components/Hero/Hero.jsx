@@ -34,7 +34,7 @@ const Hero = ({ activateHome }) => {
             <div className="hero__content" style={loaded ? entranceStyle : null}>
                 <h1 ref={ref} className="intro">I'm Dave</h1>
                 <p className="title">
-                    Software Developer. 
+                    Software Engineer. 
                 </p>
                 <Button className={"know-more"} title={"Know More"} link={"#about"} />
             </div>
