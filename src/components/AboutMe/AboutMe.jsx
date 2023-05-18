@@ -56,7 +56,7 @@ const AboutMe = ({ activateAbout }) => {
                     <Heading className={"aboutme"} title={"About Me"} style={loadedHeading ? entranceStyle : null}/>
                     <div className="text__container">
                         <p className="text" style={loadedText1 ? entranceStyle : null}>
-                            I'm a Software engineer from Sydney Australia. I specialize in creating web applications using the MERN stack (MongoDB, Express, React, Node).
+                            I'm a Software Developer from Sydney Australia. I specialize in creating web applications using the MERN stack (MongoDB, Express, React, Node).
                         </p>
                         <div className="tech" style={loadedTech ? entranceStyle : null}>
                             <img src={mongodb} alt="" className="stack__image" />
