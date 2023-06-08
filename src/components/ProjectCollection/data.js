@@ -3,7 +3,6 @@ import netflixImage from "../../assets/netflix1.PNG";
 import caitysClothingImage from "../../assets/caitys-clothing-store.PNG";
 import pokemonImage from "../../assets/daves-pokedex.PNG";
 import ticketLoggerImage from "../../assets/ticket-logger.PNG";
-import sortImaage from "../../assets/visual-sorting.PNG";
 import algoCloneImage from "../../assets/algo-clone.PNG";
 
 //-- Icons
@@ -110,19 +109,6 @@ const projectsArray = [
                herokuIcon,
           ],
      },
-     // {
-     //     title: "Visual Sorting",
-     //     description: `
-     //         Simple app created using ReactJS that displays how different sorting algorithms sort
-     //         data in their own unique ways. Currently displays 4 types of sorting algoritms: Bubble,
-     //         Insertion, Selection, and Quick. Libraries include Redux for state management.
-     //         Responsive Design. Hosted on Heroku.
-     //     `,
-     //     image: sortImaage,
-     //     url: 'https://visual-sorting-live.herokuapp.com/',
-     //     github: 'https://github.com/davecade/visual-sorting',
-     //     technologies: [reactIcon, reduxIcon, herokuIcon]
-     // },
 ];
 
 export default projectsArray;
