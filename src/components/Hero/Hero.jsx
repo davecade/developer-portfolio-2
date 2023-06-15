@@ -38,7 +38,7 @@ const Hero = ({ activateHome }) => {
                 <h1 ref={ref} className="intro">
                     I'm Dave
                 </h1>
-                <p className="title">Full Stack Software Developer.</p>
+                <p className="title">Software Developer.</p>
                 <Button
                     className={"know-more"}
                     title={"Know More"}
